@@ -11,6 +11,7 @@ export class NavegacionComponent implements OnInit {
   public isLogin: boolean;
   public nombreUsuario: string; 
   public emailUsuario: string;
+  public fotoUsuario: string;
 
   constructor(
     public authService: AuthService,
@@ -24,6 +25,7 @@ export class NavegacionComponent implements OnInit {
         this.isLogin = true;
         this.nombreUsuario = auth.displayName;
         this.emailUsuario = auth.email;
+        this.fotoUsuario = auth.photoURL;
       }else{
         this.isLogin = false;
       }
