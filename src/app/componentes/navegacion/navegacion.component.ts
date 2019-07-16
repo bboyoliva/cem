@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavegacionComponent implements OnInit {
   public isLogin: boolean;
-  public nombreUsuario: string; 
+  public nombreUsuario: string;
   public emailUsuario: string;
   public fotoUsuario: string;
 
@@ -18,21 +18,21 @@ export class NavegacionComponent implements OnInit {
     public router: Router
   ) { }
 
-  
+
   ngOnInit() {
     this.authService.getAuth().subscribe( auth => {
-      if(auth){
+      if (auth) {
         this.isLogin = true;
         this.nombreUsuario = auth.displayName;
         this.emailUsuario = auth.email;
         this.fotoUsuario = auth.photoURL;
-      }else{
+      } else {
         this.isLogin = false;
       }
     });
   }
 
-  onClickLogout(){
+  onClickLogout() {
     this.authService.logout();
   }
 
