@@ -12,9 +12,21 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
+ Instalar Phyton 3 y marcar check de guardar path antes de compilar.
+
+ -- CONFIG PROXY [NO REQUERIDO SI NO TRABAJAMOS CON UNO]
+ npm config set registry http://registry.npmjs.org/
+ npm config set proxy http://<username>:<password>@<proxy>:<port> 
  npm config set https-proxy http://<username>:<password>@<proxy>:<port> 
  npm config set http-proxy http://<username>:<password>@<proxy>:<port> 
+ npm config set strict-ssl false
+ 
+ -- SI LO TUVIERAMOS INSTALADO PREVIAMENTE
+ npm uninstall @angular-devkit/build-angular
+ -- 
+ npm install --save-dev @angular-devkit/build-angular@latest
  npm install @angular/cli
+ ng update @angular/cli @angular/core
  ng build
  ng serve
 
