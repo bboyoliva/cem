@@ -11,7 +11,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
-
+ INSTALACION 
  Instalar Phyton 3 y marcar check de guardar path antes de compilar.
 
  -- CONFIG PROXY [NO REQUERIDO SI NO TRABAJAMOS CON UNO]
