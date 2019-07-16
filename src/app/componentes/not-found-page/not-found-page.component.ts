@@ -17,9 +17,9 @@ export class NotFoundPageComponent implements OnInit {
   ) { }
   ngOnInit() {
     this.authService.getAuth().subscribe( auth => {
-      if(auth){
+      if (auth) {
         this.isLogin = true;
-      }else{
+      } else {
         this.isLogin = false;
       }
     });
