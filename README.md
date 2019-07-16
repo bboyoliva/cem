@@ -12,6 +12,12 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
+ npm config set https-proxy http://<username>:<password>@<proxy>:<port> 
+ npm config set http-proxy http://<username>:<password>@<proxy>:<port> 
+ npm install @angular/cli
+ ng build
+ ng serve
+
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
