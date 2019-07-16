@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../servicios/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-not-found-page',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./not-found-page.component.scss']
 })
 export class NotFoundPageComponent implements OnInit {
+  public isLogin: boolean;
 
-  constructor() { }
 
+  constructor(
+    public authService: AuthService,
+    public router: Router
+  ) { }
   ngOnInit() {
+    this.authService.getAuth().subscribe( auth => {
+      if(auth){
+        this.isLogin = true;
+      }else{
+        this.isLogin = false;
+      }
+    });
   }
 
 }
