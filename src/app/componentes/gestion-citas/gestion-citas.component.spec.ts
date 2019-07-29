@@ -10,8 +10,8 @@ describe('GestionCitasComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ GestionCitasComponent ]
     })
-    .compileComponents();
-  }));
+    .compileComponents(); 
+  })); 
 
   beforeEach(() => {
     fixture = TestBed.createComponent(GestionCitasComponent);

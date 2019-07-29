@@ -1,0 +1,63 @@
+<div class="container-fluid mt-3 pb-2">
+<div class="row">
+    <table class="table table-striped table-hover">
+      <thead class="thead-dark">
+        <th>Avatar</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Fecha Cita</th>
+        <th>Hora Cita</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cita of citas" id="{{cita.id}}">
+          <td class="align-middle"><img src="{{cita.avatar}}" alt="" class="rounded-circle"></td>
+          <td class="align-middle">{{cita.nombre}}</td>
+          <td class="align-middle"><a href="mailto:{{cita.email}}">{{cita.email}}</a></td>
+          <td class="align-middle">{{cita.fechaCita.seconds *1000 | date:'dd/MM/yyyy'}}</td>
+          <td class="align-middle">{{cita.fechaCita.seconds *1000 | date:'HH:mm'}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Modal
+      </button>
+  </div>
+
+
+<!-- Button to Open the Modal -->
+
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modidficar</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" class="form-control" id="email" placeholder="Email">
+                </div>
+              </form>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button class="btn btn-primary" (click)="borrarCita('Bvtsaxtk9CYYf6G90v3G')">Actualizar</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>

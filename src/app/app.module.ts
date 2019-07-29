@@ -9,7 +9,7 @@ import { LoginPageComponent } from './componentes/login-page/login-page.componen
 import { PrivadoPageComponent } from './componentes/privado-page/privado-page.component';
 import { NotFoundPageComponent } from './componentes/not-found-page/not-found-page.component';
 import { RegistroPageComponent } from './componentes/registro-page/registro-page.component';
-import { GestionCitasComponent } from './gestion-citas/gestion-citas.component';
+import { GestionCitasComponent } from './componentes/gestion-citas/gestion-citas.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';

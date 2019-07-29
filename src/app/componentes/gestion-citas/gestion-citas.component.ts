@@ -23,4 +23,13 @@ export class GestionCitasComponent implements OnInit {
     });
   }
 
+  actualizarCita(cita: Cita) {
+    this.citasService.updateCita(cita);
+  }
+
+  borrarCita(id: string) {
+    this.citasService.deleteCita(id);
+  }
+
+
 }

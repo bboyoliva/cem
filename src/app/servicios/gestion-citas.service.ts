@@ -7,11 +7,22 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class GestionCitasService {
 
-  constructor(private firestone: AngularFirestore ) { }
+  constructor(private firestore: AngularFirestore ) { }
 
   getCitas() {
-    return this.firestone.collection('usuarios').snapshotChanges();
+    return this.firestore.collection('usuarios').snapshotChanges();
   }
 
+  updateCita(cita: Cita) {
+    delete cita.id;
+    this.firestore.doc('usuarios/' + cita.id).update(cita);
+  }
+  deleteCita(citaId: string) {
+    this.firestore.doc('usuarios/' + citaId).delete();
+  }
+
+  createCita(policy: Cita) {
+    return this.firestore.collection('usuarios').add(policy);
+  }
 }
 
